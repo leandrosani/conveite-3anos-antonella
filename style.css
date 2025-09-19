@@ -1,0 +1,114 @@
+:root {
+  --freedoka: font-family: "Fredoka", sans-serif;
+  --poppins: font-family: "Poppins", sans-serif;
+}
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(180deg, #f8c6ec, #f3a0e6);
+      overflow: hidden;
+    }
+
+    .balao {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #ff69b4, #d63384);
+      border-radius: 50% 50% 45% 55%; /* formato oval do balão */
+      opacity: 0.8;
+      animation: subir 12s linear infinite;
+    }
+
+    .b1 { left: 10%; animation-duration: 10s; }
+    .b2 { left: 30%; animation-duration: 14s; background: radial-gradient(circle at 30% 30%, #ffd700, #ff8c00); }
+    .b3 { left: 50%; animation-duration: 12s; background: radial-gradient(circle at 30% 30%, #87cefa, #4682b4); }
+    .b4 { left: 70%; animation-duration: 16s; background: radial-gradient(circle at 30% 30%, #90ee90, #228b22); }
+    .b5 { left: 85%; animation-duration: 18s; background: radial-gradient(circle at 30% 30%, #ffb6c1, #ff1493); }
+
+
+    .balao::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 25px;
+      background: #999; /* corda do balão */
+    }
+
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-in-out;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px;
+    }
+
+    .card img {
+      width: 150px;
+      margin-bottom: 15px;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: #ff69b4;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d63384;
+      transform: scale(1.05);
+    }
+
+    /* Animações */
+    @keyframes subir {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
