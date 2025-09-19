@@ -9,7 +9,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: var(--freedoka);
       background: linear-gradient(180deg, #f8c6ec, #f3a0e6);
       overflow: hidden;
     }
@@ -57,7 +57,7 @@
     }
 
     .card img {
-      width: 150px;
+      width: 120px;
       margin-bottom: 15px;
       animation: float 3s infinite ease-in-out;
     }
